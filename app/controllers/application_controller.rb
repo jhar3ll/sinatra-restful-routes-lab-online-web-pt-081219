@@ -7,18 +7,11 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
   
-  get '/recipes/new'
-   erb :new 
- end 
-
   get '/recipes' do 
     @recipes = Recipe.all
   erb :index 
   end 
 
-  get '/recipes/:id'
-    @recipe = Recipe.find_by_id(params[:id])
-  erb :show
-  end 
+ 
  end 
 
