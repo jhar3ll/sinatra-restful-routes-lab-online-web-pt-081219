@@ -7,10 +7,10 @@ class ApplicationController < Sinatra::Base
   get '/recipes' do 
     @recipes = Recipe.all
   erb :index 
-end 
+  end 
 
   get '/recipes/:id'
   erb :show
-end 
+  end 
 
 end
