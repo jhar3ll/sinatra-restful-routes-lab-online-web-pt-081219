@@ -24,7 +24,9 @@ class ApplicationController < Sinatra::Base
    erb :edit 
  end 
  
- 
+ post '/recipes' do  #creates a recipe
+    @recipe = Recipe.create(params)
+  end 
  
 
  
